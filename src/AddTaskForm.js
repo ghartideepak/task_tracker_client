@@ -10,8 +10,7 @@ function AddTaskForm({ onTaskAdded, token }) { // accept token as prop
 
     try {
       // Send POST request to backend with Authorization header
-      const response = await fetch('https://task-tracker-0afe.onrender.com
-/api/tasks', {
+      const response = await fetch('https://task-tracker-0afe.onrender.com/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
