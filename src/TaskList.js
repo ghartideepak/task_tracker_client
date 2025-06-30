@@ -7,7 +7,8 @@ function TaskList() {
 
   // Fetch all tasks from backend
   const fetchTasks = () => {
-    fetch('http://localhost:5000/api/tasks')
+    fetch('https://task-tracker-0afe.onrender.com
+/api/tasks')
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);
@@ -32,7 +33,8 @@ function TaskList() {
   // DELETE task
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/tasks/${id}`, {
+      const res = await fetch(`https://task-tracker-0afe.onrender.com
+/api/tasks/${id}`, {
         method: 'DELETE',
       });
       const result = await res.json();
@@ -50,7 +52,8 @@ function TaskList() {
     try {
       const updated = { ...task, completed: !task.completed };
 
-      const res = await fetch(`http://localhost:5000/api/tasks/${task._id}`, {
+      const res = await fetch(`https://task-tracker-0afe.onrender.com
+/api/tasks/${task._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updated),
